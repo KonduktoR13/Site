@@ -58,6 +58,12 @@ body {
 .btn { background: var(--brand); color: var(--brand-ink); padding: 12px 20px; border-radius: 10px; text-decoration: none; display: inline-block; font-weight: 700; border: 0; cursor: pointer; }
 .btn:hover { filter: brightness(0.95); }
 
+.btn .material-icons-round {
+  font-size: 20px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
 /* Sections */
 .section { max-width: 1100px; margin: 0 auto; padding: 64px 16px; }
 .section h2 { font-size: 28px; margin: 0 0 20px; }
