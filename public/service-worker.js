@@ -1,10 +1,10 @@
 const CACHE = 'minutrenn-v2';
 const ASSETS = [
-  '/index.html',
-  '/manifest.json',
-  '/img/icon-192.png',
-  '/img/icon-512.png',
-  '/img/hero.jpg'
+  './index.html',
+  './manifest.json',
+  './img/icon-192.png',
+  './img/icon-512.png',
+  './img/hero.jpg'
 ];
 
 self.addEventListener('install', event => {
@@ -27,7 +27,7 @@ self.addEventListener('fetch', event => {
   // Network-first strategy for navigation requests to avoid serving stale HTML
   if (request.mode === 'navigate') {
     event.respondWith(
-      fetch(request).catch(() => caches.match('/index.html'))
+      fetch(request).catch(() => caches.match('./index.html'))
     );
     return;
   }
