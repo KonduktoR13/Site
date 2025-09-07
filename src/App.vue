@@ -7,6 +7,7 @@
     <HeroSection />
     <TrainingCarousel />
     <OtherTrainingCarousel />
+    <NutritionVideosCarousel />
     <ServicesSection />
     <AboutSection />
     <ContactSection />
@@ -19,6 +20,7 @@ import SiteHeader from './components/SiteHeader.vue'
 import HeroSection from './components/HeroSection.vue'
 import TrainingCarousel from './components/TrainingCarousel.vue'
 import OtherTrainingCarousel from './components/OtherTrainingCarousel.vue'
+import NutritionVideosCarousel from './components/NutritionVideosCarousel.vue'
 import ServicesSection from './components/ServicesSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import ContactSection from './components/ContactSection.vue'
