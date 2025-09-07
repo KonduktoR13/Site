@@ -118,10 +118,13 @@ body {
   .contact-form .row { grid-template-columns: 1fr; }
 }
 
-/* Training carousel */
-.training-carousel { position: relative; overflow: hidden; }
-.training-carousel .carousel-track { display: flex; transition: transform 0.4s ease; }
-.training-carousel .training-card { flex: 0 0 100%; }
+/* Carousel */
+.training-carousel,
+.other-training-carousel { position: relative; overflow: hidden; }
+.training-carousel .carousel-track,
+.other-training-carousel .carousel-track { display: flex; transition: transform 0.4s ease; }
+.training-carousel .training-card,
+.other-training-carousel .training-card { flex: 0 0 100%; }
 .carousel-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: var(--brand); color: var(--brand-ink); border: none; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
 .carousel-arrow.prev { left: 16px; }
 .carousel-arrow.next { right: 16px; }
