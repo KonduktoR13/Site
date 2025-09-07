@@ -10,7 +10,8 @@ window.addEventListener('load', () => {
   if (preloader) preloader.remove()
 
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
+    navigator.serviceWorker
+      .register(`${import.meta.env.BASE_URL}service-worker.js`, { scope: import.meta.env.BASE_URL })
       .then(() => console.log('Service Worker registered'))
       .catch(err => console.error('SW registration failed:', err))
   }
