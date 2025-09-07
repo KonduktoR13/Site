@@ -79,8 +79,13 @@ body {
 .hero .hero-inner { max-width: 900px; }
 .hero h1 { font-size: clamp(28px, 6vw, 56px); margin: 0 0 12px; }
 .hero p { font-size: clamp(16px, 2.2vw, 22px); margin: 0 0 20px; color: #f0f0f0; }
-.btn { background: var(--brand); color: var(--brand-ink); padding: 12px 20px; border-radius: 10px; text-decoration: none; display: inline-block; font-weight: 700; border: 0; cursor: pointer; }
-.btn:hover { filter: brightness(0.95); }
+.hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn { padding: 12px 20px; border-radius: 10px; text-decoration: none; display: inline-block; font-weight: 700; border: 0; cursor: pointer; }
+.btn:focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); }
+.btn-primary:hover { filter: brightness(0.95); }
+.btn-secondary { background: transparent; color: var(--brand); border: 2px solid var(--brand); }
+.btn-secondary:hover { background: var(--brand); color: var(--brand-ink); }
 
 .btn .material-icons-round {
   font-size: 20px;
