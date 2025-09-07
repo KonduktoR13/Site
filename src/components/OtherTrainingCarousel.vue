@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <Carousel class="other-training-carousel" :items="trainings">
+    <Carousel class="training-carousel" :items="trainings">
       <template #default="{ item }">
         <TrainingCard :training="item" />
       </template>
