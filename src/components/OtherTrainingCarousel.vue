@@ -1,11 +1,12 @@
 <template>
-  <section class="section">
+  <section class="section" v-if="trainings.length">
     <Carousel class="training-carousel" :items="trainings">
       <template #default="{ item }">
         <TrainingCard :training="item" />
       </template>
     </Carousel>
   </section>
+  <p v-else>Нет доступных тренировок.</p>
 </template>
 
 <script setup>
