@@ -1,9 +1,14 @@
 <template>
   <header class="site-header">
-    <nav class="nav">
+    <nav class="nav" :aria-expanded="isMenuOpen">
       <div class="logo">MinuTrenn</div>
-      <input id="menu-toggle" type="checkbox" />
-      <label class="menu-button-container" for="menu-toggle">
+      <input id="menu-toggle" type="checkbox" v-model="isMenuOpen" />
+      <label
+        class="menu-button-container"
+        for="menu-toggle"
+        aria-label="Ava menüü"
+        :aria-expanded="isMenuOpen"
+      >
         <div class="menu-button"></div>
       </label>
       <ul class="menu">
@@ -16,4 +21,7 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
+const isMenuOpen = ref(false)
 </script>
