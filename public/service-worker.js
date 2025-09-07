@@ -2,8 +2,8 @@ const CACHE = 'minutrenn-v2';
 const ASSETS = [
   './index.html',
   './manifest.json',
-  './img/icon-192.png',
-  './img/icon-512.png',
+  './icon-192.png',
+  './icon-512.png',
   './img/hero.jpg'
 ];
 
