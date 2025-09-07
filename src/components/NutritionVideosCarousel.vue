@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section class="section" v-if="videos.length">
     <div class="card">
       <Carousel class="nutrition-videos-carousel" :items="videos">
         <template #default="{ item }">
@@ -10,6 +10,7 @@
       </Carousel>
     </div>
   </section>
+  <p v-else>Нет доступных видео.</p>
 </template>
 
 <script setup>

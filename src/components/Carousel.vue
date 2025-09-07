@@ -1,6 +1,11 @@
 <template>
   <div class="carousel">
-    <button class="carousel-arrow prev" @click="prev" aria-label="Previous">
+    <button
+      v-if="showArrows"
+      class="carousel-arrow prev"
+      @click="prev"
+      aria-label="Previous"
+    >
       <span class="material-icons-round">chevron_left</span>
     </button>
     <div class="carousel-track" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
@@ -8,7 +13,12 @@
         <slot :item="item" :index="i" />
       </div>
     </div>
-    <button class="carousel-arrow next" @click="next" aria-label="Next">
+    <button
+      v-if="showArrows"
+      class="carousel-arrow next"
+      @click="next"
+      aria-label="Next"
+    >
       <span class="material-icons-round">chevron_right</span>
     </button>
   </div>
@@ -26,6 +36,7 @@ const props = defineProps({
 
 const currentIndex = ref(0)
 const total = computed(() => props.items.length)
+const showArrows = computed(() => props.items.length > 1)
 
 function next() {
   if (!total.value) return
