@@ -1,6 +1,5 @@
-const CACHE = 'minutrenn-v1';
+const CACHE = 'minutrenn-v2';
 const ASSETS = [
-  '/',
   '/index.html',
   '/manifest.json',
   '/img/icon-192.png',
@@ -24,6 +23,16 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   const { request } = event;
+
+  // Network-first strategy for navigation requests to avoid serving stale HTML
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request).catch(() => caches.match('/index.html'))
+    );
+    return;
+  }
+
+  // Cache-first with background update for built JS/CSS assets
   if (/\/assets\/.*\.(js|css)$/.test(request.url)) {
     event.respondWith(
       caches.open(CACHE).then(cache =>
@@ -35,6 +44,8 @@ self.addEventListener('fetch', event => {
     );
     return;
   }
+
+  // Fallback to cache, then network for other requests
   event.respondWith(
     caches.match(request).then(cached => cached || fetch(request))
   );
