@@ -1,7 +1,7 @@
 {
   "name": "MinuTrenn",
   "short_name": "Trenn",
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0076ff",
