@@ -1,11 +1,14 @@
-// Register Service Worker (relative path for GitHub Pages subpaths)
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
+// Remove preloader and register Service Worker when page loads
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  if (preloader) preloader.remove();
+
+  if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js', { scope: './' })
       .then(() => console.log('Service Worker registered'))
       .catch(err => console.error('SW registration failed:', err));
-  });
-}
+  }
+});
 
 // Smooth anchor scroll
 document.addEventListener('click', (e) => {
