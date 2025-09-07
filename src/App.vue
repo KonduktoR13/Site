@@ -5,6 +5,7 @@
   <SiteHeader />
   <main>
     <HeroSection />
+    <TrainingCarousel />
     <ServicesSection />
     <AboutSection />
     <ContactSection />
@@ -15,6 +16,7 @@
 <script setup>
 import SiteHeader from './components/SiteHeader.vue'
 import HeroSection from './components/HeroSection.vue'
+import TrainingCarousel from './components/TrainingCarousel.vue'
 import ServicesSection from './components/ServicesSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import ContactSection from './components/ContactSection.vue'
