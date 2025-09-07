@@ -1,91 +1,20 @@
 <!DOCTYPE html>
 <html lang="et">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MinuTrenn</title>
-  <meta name="description" content="Personaal- ja rühmatreeningud. Kaasaegne PWA veebirakendus." />
-  <meta name="theme-color" content="#0076ff" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="manifest" href="manifest.json" />
-  <link rel="icon" href="img/icon-192.png" />
-  <link rel="apple-touch-icon" href="img/icon-192.png" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <div id="preloader">
-    <div class="spinner"></div>
-  </div>
-  <header class="site-header">
-    <nav class="nav">
-      <div class="logo">MinuTrenn</div>
-      <input id="menu-toggle" type="checkbox" />
-      <label class="menu-button-container" for="menu-toggle">
-        <div class="menu-button"></div>
-      </label>
-      <ul class="menu">
-        <li><a href="#services">Teenused</a></li>
-        <li><a href="#about">Meist</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" role="banner" aria-label="Hero">
-      <div class="hero-inner">
-        <h1>Tere tulemast MinuTrenn!</h1>
-        <p>Liigu targalt. Tunneta edusamme. Püsi motiveeritud.</p>
-        <div class="hero-ctas" role="group" aria-label="Peamised tegevused">
-          <a class="btn btn-primary" href="#contact">Võta ühendust</a>
-          <a class="btn btn-secondary" href="#services">Vaata treeninguid</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="section">
-      <h2>Teenused</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Personaaltrenn</h3>
-          <p>Ühele inimesele kohandatud treeningkava ja tugi.</p>
-        </article>
-        <article class="card">
-          <h3>Rühmatrennid</h3>
-          <p>Motiveeriv treening väikestes gruppides.</p>
-        </article>
-        <article class="card">
-          <h3>Toitumisnõustamine</h3>
-          <p>Lihtsad sammud paremate toitumisharjumusteni.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="about" class="section alt">
-      <h2>Meist</h2>
-      <p>Kirjelda lühidalt ennast või meeskonda. Lisa fotod ja tulemused.</p>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Kontakt</h2>
-      <form action="https://formspree.io/f/your_form_id" method="POST" class="contact-form">
-        <div class="row">
-          <input type="text" name="name" placeholder="Nimi" required />
-          <input type="email" name="email" placeholder="E-post" required />
-        </div>
-        <textarea name="message" placeholder="Sõnum" rows="5"></textarea>
-        <button type="submit" class="btn btn-primary"><span class="material-icons-round" aria-hidden="true">send</span>Saada</button>
-      </form>
-      <p class="note">Näidisvorm: asenda <code>your_form_id</code> oma Formspree/Netlify Forms/Google Forms lahendusega.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>&copy; 2025 MinuTrenn — PWA näidis. Kõik õigused kaitstud.</p>
-  </footer>
-
-  <script src="js/main.js" defer></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MinuTrenn</title>
+    <meta name="description" content="Personaal- ja rühmatreeningud. Kaasaegne PWA veebirakendus." />
+    <meta name="theme-color" content="#0076ff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" href="/img/icon-192.png" />
+    <link rel="apple-touch-icon" href="/img/icon-192.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>

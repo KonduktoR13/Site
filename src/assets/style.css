@@ -68,7 +68,7 @@ body {
 
 /* Hero */
 .hero {
-  background: url("../img/hero.jpg") center / cover no-repeat, linear-gradient(160deg, #0c0c0c, #242424);
+  background: url("/img/hero.jpg") center / cover no-repeat, linear-gradient(160deg, #0c0c0c, #242424);
   color: white;
   min-height: 60vh;
   display: grid;
